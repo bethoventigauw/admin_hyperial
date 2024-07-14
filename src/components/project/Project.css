@@ -1,0 +1,115 @@
+.all-project {
+  width: 90%;
+  font-family: 'Poppins', sans-serif;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.all-project h1 {
+  text-align: left;
+  margin-bottom: 20px;
+  color: #001529;
+}
+
+.error {
+  color: red;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.ant-table-thead > tr > th {
+  background-color: #001529;
+  color: white;
+}
+
+.ant-table-tbody > tr > td {
+  background-color: white;
+}
+
+.ant-table-tbody > tr:nth-child(even) > td {
+  background-color: #f9f9f9;
+}
+
+.ant-btn-primary {
+  background-color: #1890ff;
+  border-color: #1890ff;
+}
+
+.ant-btn-primary:hover, .ant-btn-primary:focus {
+  background-color: #40a9ff;
+  border-color: #40a9ff;
+}
+
+.project-name-column {
+  background-color: #e6eef3;
+  padding: 5px;
+  border: #607F94;
+  border-radius: 18px;
+  color: #000a2c;
+  font-weight: 500;
+}
+
+.new-materials-list {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.new-materials-list .new-material-item {
+  background-color: #2C4C61;
+  padding: 5px;
+  border: 1.5px solid #2C4C61;
+  border-radius: 5px;
+  color: white;
+  font-weight: 500;
+}
+
+.materials-list {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.materials-list .material-item {
+  background-color: #f0f5ff;
+  padding: 8px;
+  margin-bottom: 4px;
+  border: 1px solid #adc6ff;
+  border-radius: 4px;
+}
+
+.material-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 10px;
+}
+
+.material-item label {
+  flex: 1;
+}
+
+.material-item select,
+.material-item input {
+  flex: 2;
+  height: 40px;
+  font-size: 16px;
+}
+
+.material-item input {
+  width: 150px;
+}
+
+.ant-modal {
+  min-width: 600px;
+}
+
+.ant-modal .ant-modal-content {
+  padding: 20px;
+}
+
+.project-detail-modal p {
+  margin: 10px 0;
+}

@@ -1,0 +1,13 @@
+/* Admin.css */
+.Admin {
+  display: flex;
+}
+
+.mainContent {
+  flex-grow: 1;
+}
+
+
+
+
+

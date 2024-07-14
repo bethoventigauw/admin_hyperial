@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #ffffff;
+    margin: 0;
+    padding: 0;
+}
+
+.user-management-container {
+    width: 90%;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.user-management-container h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.user-management-container .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.user-management-container .header h2 {
+    margin: 0;
+}
+
+.user-management-container .header .ant-btn {
+    margin: 10px 5px;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: 500;
+    background-color: #2C4C61;
+    border-color: #2C4C61;
+    color: #fff;
+}
+
+.user-management-container .header .ant-btn:hover {
+    background-color: #3a5a70;
+}
+
+.user-management-container .ant-table {
+    margin-bottom: 20px;
+    background-color: #fff;
+}
+
+.user-management-container .ant-table th,
+.user-management-container .ant-table td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+    font-size: 14px;
+}
+
+.user-management-container .ant-table th {
+    background-color: #007bff;
+    color: #fff;
+    font-weight: 600;
+}
+
+.user-management-container .ant-table-row:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.user-management-container .ant-table-row:hover {
+    background-color: #f1f1f1;
+}
+
+.user-management-container .ant-space {
+    display: flex;
+    justify-content: center;
+}
+
+.user-management-container .ant-btn-link {
+    padding: 0;
+    font-size: 16px;
+}
+
+.user-management-container .ant-tooltip-inner {
+    font-size: 14px;
+}

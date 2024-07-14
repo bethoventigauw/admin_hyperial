@@ -1,0 +1,158 @@
+.dashboard-container {
+  width: 90%;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.dashboard {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+
+.overview {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 20px;
+}
+
+.card {
+  padding: 10px;
+  border-radius: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 22%;
+  text-align: left;
+  color: white;
+}
+
+.card-icon {
+  font-size: 1em;
+  color: white;
+  margin-top: 20px;
+  margin-left: 10px;
+}
+
+.card-expenditure {
+  background: #A9BBC7;
+}
+
+.card-orders {
+  background: #607F94;
+}
+
+.card-users {
+  background: #2C4C61;
+}
+
+.card-projects {
+  background: #0D2433;
+}
+
+.chart-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.chart-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.chart-monthly {
+  background: #fffafa;
+  padding: 10px;
+  border-radius: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 48%;
+}
+
+.chart-order {
+  background: #fffafa;
+  padding: 10px;
+  border-radius: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 48%;
+}
+
+.chart-project {
+  background: #fffafa;
+  padding: 10px;
+  border-radius: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 22%;
+}
+
+.recent-invoice {
+  background: #ffffff;
+  padding: 10px;
+  border-radius: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 22%;
+}
+
+.recent-order {
+  background: #ffffff;
+  padding: 10px;
+  border-radius: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 22%;
+}
+
+.recent-project {
+  background: #ffffff;
+  padding: 10px;
+  border-radius: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 22%;
+}
+
+h3 {
+  margin-bottom: 20px;
+}
+
+.ant-list-item {
+  background: #ffffff;
+  padding: 10px;
+  margin-bottom: 5px;
+  border-radius: 4px;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  background: #fffafa;
+  padding: 10px;
+  margin-bottom: 5px;
+  border-radius: 4px;
+
+}
+
+.green-text {
+  color: green;
+  font-weight: normal;
+}
+
+.status-pending {
+  color: red;
+  font-weight: normal;
+}
+
+.status-delivered,
+.status-in-progress {
+  color: rgb(25, 49, 185);
+  font-weight: normal;
+}
+
+.status-received,
+.status-completed {
+  color: green;
+  font-weight: normal;
+}
+

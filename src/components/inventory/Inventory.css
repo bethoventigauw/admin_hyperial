@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f7f7f7;
+    margin: 0;
+    padding: 0;
+}
+
+.inventory-container {
+    width: 90%;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fffafa;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.inventory-container h1,
+.inventory-container h2 {
+    text-align: left;
+    color: #000a2c;
+    box-shadow: none;
+    margin-bottom: 20px;
+}
+
+.add-material,
+.edit-material {
+    margin-bottom: 30px;
+}
+
+.inventory-container .ant-btn {
+    margin: 10px 5px;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.inventory-container .ant-btn-primary {
+    background-color: rgb(6, 87, 240);
+    color: #fff;
+}
+
+.inventory-container .ant-table {
+    margin-bottom: 20px;
+    background-color: #fff;
+}
+
+.inventory-container .ant-table th,
+.inventory-container .ant-table td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+    font-size: 14px;
+}
+
+.inventory-container .ant-table th {
+    background-color: #48c5ff;
+    color: #fff;
+    font-weight: 600;
+}
+
+.inventory-container .ant-table-row:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.inventory-container .ant-table-row:hover {
+    background-color: #f1f1f1;
+}
+
+/* Modal Form Styling */
+.ant-modal {
+    border-radius: 8px;
+}
+
+.ant-modal-content {
+    border-radius: 8px;
+    box-shadow: none !important; /* Remove shadow */
+}
+
+.ant-modal-title {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.ant-form-item-label > label {
+    font-weight: 600;
+}
+
+.ant-input {
+    font-size: 14px;
+    padding: 8px;
+    border-radius: 4px;
+}
+
+.ant-modal-footer .ant-btn {
+    font-size: 14px;
+    font-weight: 600;
+}
+
+/* Delete button style */
+.inventory-container .delete-button {
+    color: red; /* Set text color to red */
+    background-color: transparent; /* Remove background */
+    border: none;
+}
+
+.inventory-container .delete-button:hover {
+    background-color: transparent; /* Ensure no background on hover */
+    color: rgb(173, 14, 14) !important;
+}
+
+/* Custom styles for stock icons */
+.low-stock-icon {
+    color: orange;
+    margin-left: 8px;
+}
+
+.out-of-stock-icon {
+    color: red;
+    margin-left: 8px;
+}
+
+/* Icon legend styling */
+.icon-legend {
+    margin-bottom: 20px;
+}
+
+.icon-legend p {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    color: #000a2c;
+}
+
+.icon-legend p .anticon {
+    margin-right: 8px;
+}
