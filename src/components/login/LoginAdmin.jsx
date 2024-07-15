@@ -65,7 +65,7 @@ function Login() {
           <button type="submit" className="login-button">Login</button>
         </form>
         <div className="back-to-landing">
-          <Link to="http://localhost:4000/" onClick={() => console.log('Navigating to LandingPage')}>
+          <Link to="https://hyperial.my.id/" onClick={() => console.log('Navigating to LandingPage')}>
             Back to LandingPage
           </Link>
         </div>
