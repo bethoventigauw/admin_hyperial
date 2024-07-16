@@ -18,7 +18,7 @@ function Login() {
     event.preventDefault();
     console.log(values); // Print values to ensure data is being sent
 
-    axios.post('http://localhost:5000/authen/adminLogin', values) // Updated URL for admin login
+    axios.post('https://backend.hyperial.my.id/authen/adminLogin', values) // Updated URL for admin login
       .then(res => {
         console.log(res.data); // Print response from server
         if (res.data.valid) {

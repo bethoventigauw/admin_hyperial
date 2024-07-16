@@ -26,7 +26,7 @@ const Dashboard = () => {
   const [showProjectNames, setShowProjectNames] = useState(false);
 
   useEffect(() => {
-    axios.get('http://localhost:5000/dashboard')
+    axios.get('https://backend.hyperial.my.id/dashboard')
       .then(response => {
         setData(response.data);
       })

@@ -14,7 +14,7 @@ const Navbar = () => {
       title: 'Confirm Logout',
       content: 'Are you sure you want to logout?',
       onOk: () => {
-        axios.get('http://localhost:5000/logout')
+        axios.get('https://backend.hyperial.my.id/logout')
           .then(response => {
             if (response.status === 200) {
               localStorage.removeItem('token'); // Clear token from local storage

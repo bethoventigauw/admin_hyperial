@@ -30,7 +30,7 @@
 }
 
 .ant-table-tbody > tr:nth-child(even) > td {
-  background-color: #f9f9f9;
+  background-color: #ffffff;
 }
 
 .ant-btn-primary {
@@ -44,11 +44,7 @@
 }
 
 .project-name-column {
-  background-color: #e6eef3;
-  padding: 5px;
-  border: #607F94;
-  border-radius: 18px;
-  color: #000a2c;
+  color: #607F94;
   font-weight: 500;
 }
 
@@ -58,11 +54,11 @@
 }
 
 .new-materials-list .new-material-item {
-  background-color: #2C4C61;
+  background-color: #ffffff;
   padding: 5px;
-  border: 1.5px solid #2C4C61;
+  border: 1.5px solid #ffffff;
   border-radius: 5px;
-  color: white;
+  color: rgb(14, 185, 43);
   font-weight: 500;
 }
 

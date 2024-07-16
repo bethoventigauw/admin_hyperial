@@ -20,7 +20,7 @@ const UserManagement = () => {
 
   const fetchUsers = async () => {
     try {
-      const response = await axios.get('http://localhost:5000/user/get-users');
+      const response = await axios.get('https://backend.hyperial.my.id/user/get-users');
       const filteredUsers = response.data.users.filter(user => user.Role !== 'admin');
       setData(filteredUsers);
       setLoading(false);
@@ -33,7 +33,7 @@ const UserManagement = () => {
 
   const deleteUser = async (id) => {
     try {
-      await axios.delete(`http://localhost:5000/user/delete-user/${id}`);
+      await axios.delete(`https://backend.hyperial.my.id/user/delete-user/${id}`);
       message.success("User deleted successfully");
       fetchUsers(); // Refresh the list after deletion
     } catch (error) {
@@ -60,7 +60,7 @@ const UserManagement = () => {
 
   const fetchVendorDetails = async (vendorId) => {
     try {
-      const response = await axios.get(`http://localhost:5000/user/get-user/${vendorId}`);
+      const response = await axios.get(`https://backend.hyperial.my.id/user/get-user/${vendorId}`);
       setVendorDetails(response.data.user.vendorDetails);
       setIsVendorModalVisible(true);
     } catch (error) {
@@ -219,7 +219,7 @@ const SignupForm = () => {
 
   const onFinish = async (values) => {
     try {
-      const response = await axios.post('http://localhost:5000/authen/register', values);
+      const response = await axios.post('https://backend.hyperial.my.id/authen/register', values);
       if (response.status === 201) {
         message.success("Signup successful!");
         form.resetFields();

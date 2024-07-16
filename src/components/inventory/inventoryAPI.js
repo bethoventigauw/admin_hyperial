@@ -1,5 +1,5 @@
-const ADMIN_API_URL = 'http://localhost:5000/admin';
-const ORDERS_API_URL = 'http://localhost:5000/order';
+const ADMIN_API_URL = 'https://backend.hyperial.my.id/admin';
+const ORDERS_API_URL = 'https://backend.hyperial.my.id/order';
 
 export const getAllMaterials = async () => {
     const response = await fetch(`${ADMIN_API_URL}/allMaterials`);

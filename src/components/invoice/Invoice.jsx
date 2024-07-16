@@ -10,7 +10,7 @@ const Invoice = () => {
   useEffect(() => {
     const fetchInvoice = async () => {
       try {
-        const response = await axios.get(`http://localhost:5000/order/invoice/${orderId}`);
+        const response = await axios.get(`https://backend.hyperial.my.id/order/invoice/${orderId}`);
         setInvoice(response.data.invoice);
       } catch (error) {
         console.error('Error fetching invoice', error);

@@ -18,7 +18,7 @@ const Project = () => {
 
   const fetchAllProjects = async () => {
     try {
-      const response = await axios.get('http://localhost:5000/admin/allProjects');
+      const response = await axios.get('https://backend.hyperial.my.id/admin/allProjects');
       setProjects(response.data);
     } catch (error) {
       setError('Error fetching projects');
@@ -36,7 +36,7 @@ const Project = () => {
 
   const approveProject = async (projectID) => {
     try {
-      await axios.post(`http://localhost:5000/admin/approveProject/${projectID}`);
+      await axios.post(`https://backend.hyperial.my.id/admin/approveProject/${projectID}`);
       message.success('Project approved successfully');
       fetchAllProjects();
     } catch (error) {
@@ -47,7 +47,7 @@ const Project = () => {
 
   const approveAdditionalMaterial = async (projectID) => {
     try {
-      await axios.post(`http://localhost:5000/admin/approveAdditionalMaterial/${projectID}`);
+      await axios.post(`https://backend.hyperial.my.id/admin/approveAdditionalMaterial/${projectID}`);
       message.success('Additional materials approved successfully');
       fetchAllProjects();
     } catch (error) {

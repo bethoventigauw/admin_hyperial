@@ -19,7 +19,7 @@ const Request = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const materialResponse = await axios.get('http://localhost:5000/order/materials');
+        const materialResponse = await axios.get('https://backend.hyperial.my.id/order/materials');
         setMaterials(materialResponse.data.materials);
       } catch (error) {
         console.error('Error fetching data', error);
@@ -89,7 +89,7 @@ const Request = () => {
           items: groupedItems[vendorID],
         };
 
-        const response = await axios.post('http://localhost:5000/order/newOrder', orderData);
+        const response = await axios.post('https://backend.hyperial.my.id/order/newOrder', orderData);
         message.success(response.data.message);
         fetchOrders();
       }
@@ -100,7 +100,7 @@ const Request = () => {
 
   const fetchOrders = async () => {
     try {
-      const response = await axios.get('http://localhost:5000/order/orders');
+      const response = await axios.get('https://backend.hyperial.my.id/order/orders');
       setOrders(response.data.orders);
     } catch (error) {
       console.error('Error fetching orders', error);
@@ -113,7 +113,7 @@ const Request = () => {
 
   const handleReceiveOrder = async (orderId) => {
     try {
-      const response = await axios.post(`http://localhost:5000/order/orders/${orderId}/receive`);
+      const response = await axios.post(`https://backend.hyperial.my.id/order/orders/${orderId}/receive`);
       message.success(response.data.message);
       fetchOrders();
     } catch (error) {
