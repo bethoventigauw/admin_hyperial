@@ -1,7 +1,10 @@
 import axios from "axios";
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
+import { notification } from 'antd';
+import 'antd/dist/reset.css'; // Ant Design default styles
 import './LoginAdmin.css';
+import logo from '../../assets/images/hyperial_logo_only.png';
 
 function Login() {
   const [values, setValues] = useState({
@@ -12,6 +15,13 @@ function Login() {
 
   const handleInput = (event) => {
     setValues(prev => ({ ...prev, [event.target.name]: event.target.value }));
+  };
+
+  const openNotification = (type, message) => {
+    notification[type]({
+      message: type === 'success' ? 'Login Successful' : 'Login Failed',
+      description: message,
+    });
   };
 
   const handleSubmit = (event) => {
@@ -26,20 +36,25 @@ function Login() {
           localStorage.setItem('role', res.data.role); // Store user role
 
           if (res.data.role === 'admin') {
-            navigate('/dashboard'); // Navigate to admin dashboard
+            openNotification('success', 'Welcome Back!');
+            setTimeout(() => navigate('/dashboard'), 2000); // Redirect after 2 seconds
           } else {
-            alert("Not authorized as admin.");
+            openNotification('error', "Not authorized as admin.");
           }
         } else {
-          alert("Invalid credentials. Please try again.");
+          openNotification('error', "Invalid credentials. Please try again.");
         }
       })
-      .catch(err => console.log(err));
+      .catch(err => {
+        openNotification('error', "Input a valid email and password!");
+        console.log(err);
+      });
   };
 
   return (
     <div className="wrapper">
       <div className="login-container">
+      <img src={logo} alt="Login" className="login-image" /> {/* Add your image */}
         <form onSubmit={handleSubmit} className="login-form">
           <h2 className="login-title">Admin Login</h2>
           <div className="form-group">
