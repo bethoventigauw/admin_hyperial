@@ -1,10 +1,9 @@
 import axios from "axios";
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import { notification } from 'antd';
-import 'antd/dist/reset.css'; // Ant Design default styles
+import { FaUser, FaLock } from "react-icons/fa";
+import { notification } from "antd";
 import './LoginAdmin.css';
-import logo from '../../assets/images/hyperial_logo_only.png';
 
 function Login() {
   const [values, setValues] = useState({
@@ -28,7 +27,7 @@ function Login() {
     event.preventDefault();
     console.log(values); // Print values to ensure data is being sent
 
-    axios.post('https://backend.hyperial.my.id/authen/adminLogin', values) // Updated URL for admin login
+    axios.post('https://admin.hyperial.my.id/loginAdmin', values) // Updated URL for admin login
       .then(res => {
         console.log(res.data); // Print response from server
         if (res.data.valid) {
@@ -54,7 +53,6 @@ function Login() {
   return (
     <div className="wrapper">
       <div className="login-container">
-      <img src={logo} alt="Login" className="login-image" /> {/* Add your image */}
         <form onSubmit={handleSubmit} className="login-form">
           <h2 className="login-title">Admin Login</h2>
           <div className="form-group">
@@ -62,31 +60,35 @@ function Login() {
             <input
               type="email"
               name="Email"
+              placeholder="Enter your email"
               value={values.Email}
               onChange={handleInput}
               required
             />
+            <FaUser className="icon"/>
+
           </div>
           <div className="form-group">
             <label>Password</label>
             <input
               type="password"
               name="Password"
+              placeholder="Enter your password"
               value={values.Password}
               onChange={handleInput}
               required
             />
+            <FaLock className="icon"/>
+
           </div>
           <button type="submit" className="login-button">Login</button>
         </form>
-        <div className="back-to-landing">
-          <Link to="https://hyperial.my.id/" onClick={() => console.log('Navigating to LandingPage')}>
-            Back to LandingPage
-          </Link>
-        </div>
+        <p className="signup-link">
+         <Link to="https://hyperial.my.id">Back to Landing Page</Link>
+        </p>
       </div>
     </div>
   );
 }
 
-export default Login;
+export default Login;
